@@ -35,9 +35,9 @@
 			"SlopeClamp": 0.0,
 			"Map": [
 				{
-					"Name": "Map_Pan_Fine",
+					"Name": "Map_PanF",
 					"Type": "_Transforms_",
-					"Priority": 1,
+					"Priority": 2,
 					"Targets": [
 						"T_Yoke"
 					],
@@ -91,9 +91,9 @@
 			"SlopeClamp": 0.0,
 			"Map": [
 				{
-					"Name": "Map_Tilt_Fine",
+					"Name": "Map_TiltF",
 					"Type": "_Transforms_",
-					"Priority": 1,
+					"Priority": 5,
 					"Targets": [
 						"T_Head"
 					],
@@ -126,9 +126,9 @@
 			"SlopeClamp": 0.0,
 			"Map": [
 				{
-					"Name": "Map_4",
+					"Name": "Map_Lens_Dim",
 					"Type": "_Geometry_",
-					"Priority": 10,
+					"Priority": 5,
 					"Targets": [
 						"G_Beam",
 						"G_Beam",
@@ -150,9 +150,9 @@
 					"BlendMode": "Multiply"
 				},
 				{
-					"Name": "Map_9",
+					"Name": "Map_Em_Dim",
 					"Type": "_Emitters_",
-					"Priority": 10,
+					"Priority": 5,
 					"Targets": [
 						"E_Emitter",
 						"E_Emitter",
@@ -182,9 +182,9 @@
 			"SlopeClamp": 0.0,
 			"Map": [
 				{
-					"Name": "Map_0to9_off",
+					"Name": "Map_Shut_Off",
 					"Type": "_Geometry_",
-					"Priority": 3,
+					"Priority": 10,
 					"Targets": [
 						"G_Beam",
 						"G_Beam",
@@ -203,12 +203,12 @@
 					"OutputMax": 0.0,
 					"OutputCustom": "",
 					"AnimationMode": "Constant",
-					"BlendMode": "Multiply"
+					"BlendMode": "Set"
 				},
 				{
-					"Name": "Map_10to245_strobe",
+					"Name": "Map_Shut_Strobe",
 					"Type": "_Geometry_",
-					"Priority": 3,
+					"Priority": 10,
 					"Targets": [
 						"G_Beam",
 						"G_Beam",
@@ -224,23 +224,23 @@
 					"InputMin": 0,
 					"InputMax": 255,
 					"OutputMin": 0.0,
-					"OutputMax": 1.0,
+					"OutputMax": 0.0,
 					"OutputCustom": "",
 					"AnimationMode": "Constant",
 					"BlendMode": "Duty",
 					"DutyRange": [
-						0.75,
-						0.01
+						0.65,
+						0.1
 					],
 					"DutyBias": [
 						0.1,
-						0.4
+						0.5
 					]
 				},
 				{
-					"Name": "Map_0to10_off",
+					"Name": "Map_em_Off",
 					"Type": "_Emitters_",
-					"Priority": 3,
+					"Priority": 10,
 					"Targets": [
 						"E_Emitter",
 						"E_Emitter",
@@ -259,12 +259,12 @@
 					"OutputMax": 0.0,
 					"OutputCustom": "",
 					"AnimationMode": "Constant",
-					"BlendMode": "Multiply"
+					"BlendMode": "Set"
 				},
 				{
-					"Name": "Map_10to246_strobe",
+					"Name": "Map_Em_Strobe",
 					"Type": "_Emitters_",
-					"Priority": 3,
+					"Priority": 10,
 					"Targets": [
 						"E_Emitter",
 						"E_Emitter",
@@ -280,17 +280,17 @@
 					"InputMin": 0,
 					"InputMax": 255,
 					"OutputMin": 0.0,
-					"OutputMax": 1.0,
+					"OutputMax": 0.0,
 					"OutputCustom": "",
 					"AnimationMode": "Constant",
 					"BlendMode": "Duty",
 					"DutyRange": [
-						0.75,
-						0.01
+						0.65,
+						0.1
 					],
 					"DutyBias": [
 						0.1,
-						0.4
+						0.5
 					]
 				}
 			]
@@ -302,7 +302,7 @@
 			"SlopeClamp": 0.0,
 			"Map": [
 				{
-					"Name": "Map",
+					"Name": "Map_Lens_R",
 					"Type": "_Geometry_",
 					"Priority": 1,
 					"Targets": [
@@ -319,10 +319,10 @@
 					"OutputMax": 5.0,
 					"OutputCustom": "",
 					"AnimationMode": "Constant",
-					"BlendMode": "Add"
+					"BlendMode": "Set"
 				},
 				{
-					"Name": "Map_5",
+					"Name": "Map_Em_R",
 					"Type": "_Emitters_",
 					"Priority": 1,
 					"Targets": [
@@ -350,7 +350,7 @@
 			"SlopeClamp": 0.0,
 			"Map": [
 				{
-					"Name": "Map_1",
+					"Name": "Map_Lens_G",
 					"Type": "_Geometry_",
 					"Priority": 1,
 					"Targets": [
@@ -370,7 +370,7 @@
 					"BlendMode": "Add"
 				},
 				{
-					"Name": "Map_6",
+					"Name": "Map_Em_G",
 					"Type": "_Emitters_",
 					"Priority": 1,
 					"Targets": [
@@ -398,27 +398,7 @@
 			"SlopeClamp": 0.0,
 			"Map": [
 				{
-					"Name": "Map_2",
-					"Type": "_Geometry_",
-					"Priority": 1,
-					"Targets": [
-						"G_Beam"
-					],
-					"Parameters": [
-						"EmitB"
-					],
-					"ActiveMin": 0,
-					"ActiveMax": 255,
-					"InputMin": 0,
-					"InputMax": 255,
-					"OutputMin": 0.0,
-					"OutputMax": 5.0,
-					"OutputCustom": "",
-					"AnimationMode": "Constant",
-					"BlendMode": "Add"
-				},
-				{
-					"Name": "Map_7",
+					"Name": "Map_Lens_b",
 					"Type": "_Emitters_",
 					"Priority": 1,
 					"Targets": [
@@ -446,9 +426,9 @@
 			"SlopeClamp": 0.0,
 			"Map": [
 				{
-					"Name": "Map_3",
+					"Name": "Map_Lens_w",
 					"Type": "_Geometry_",
-					"Priority": 2,
+					"Priority": 5,
 					"Targets": [
 						"G_Beam",
 						"G_Beam",
@@ -464,15 +444,15 @@
 					"InputMin": 0,
 					"InputMax": 255,
 					"OutputMin": 0.0,
-					"OutputMax": 5.0,
+					"OutputMax": 3.0,
 					"OutputCustom": "",
 					"AnimationMode": "Constant",
 					"BlendMode": "Add"
 				},
 				{
-					"Name": "Map_8",
+					"Name": "Map_Em_w",
 					"Type": "_Emitters_",
-					"Priority": 2,
+					"Priority": 5,
 					"Targets": [
 						"E_Emitter",
 						"E_Emitter",
@@ -488,7 +468,7 @@
 					"InputMin": 0,
 					"InputMax": 255,
 					"OutputMin": 0.0,
-					"OutputMax": 1.0,
+					"OutputMax": 0.5,
 					"OutputCustom": "",
 					"AnimationMode": "Constant",
 					"BlendMode": "Add"
@@ -530,7 +510,7 @@
 			"SlopeClamp": 0.0,
 			"Map": [
 				{
-					"Name": "Map_10",
+					"Name": "Map_Focus",
 					"Type": "_Emitters_",
 					"Priority": 1,
 					"Targets": [
@@ -543,14 +523,14 @@
 					"ActiveMax": 255,
 					"InputMin": 0,
 					"InputMax": 255,
-					"OutputMin": 2.0,
-					"OutputMax": 5.0,
+					"OutputMin": 2.5,
+					"OutputMax": 8.0,
 					"OutputCustom": "",
 					"AnimationMode": "Constant",
 					"BlendMode": "Set"
 				},
 				{
-					"Name": "Map_11",
+					"Name": "Map_Focus_Outer",
 					"Type": "_Emitters_",
 					"Priority": 1,
 					"Targets": [
@@ -563,7 +543,7 @@
 					"ActiveMax": 255,
 					"InputMin": 0,
 					"InputMax": 255,
-					"OutputMin": 1.0,
+					"OutputMin": 2.0,
 					"OutputMax": 10.0,
 					"OutputCustom": "",
 					"AnimationMode": "Constant",
@@ -587,6 +567,18 @@
 		"T_Base": {
 			"Tx": 0.0,
 			"Ty": 0.0,
+			"Tz": 0.0,
+			"Rx": 0.0,
+			"Ry": 0.0,
+			"Rz": 0.0,
+			"Sx": 1.0,
+			"Sy": 1.0,
+			"Sz": 1.0,
+			"Parent": "T_Root"
+		},
+		"T_Yoke": {
+			"Tx": 0.0,
+			"Ty": 7.0,
 			"Tz": 0.0,
 			"Rx": 0.0,
 			"Ry": 0.0,
@@ -620,21 +612,9 @@
 			"Sz": 1.0,
 			"Parent": "T_Yoke"
 		},
-		"T_Yoke": {
-			"Tx": 0.0,
-			"Ty": 7.0,
-			"Tz": 0.0,
-			"Rx": 0.0,
-			"Ry": 0.0,
-			"Rz": 0.0,
-			"Sx": 1.0,
-			"Sy": 1.0,
-			"Sz": 1.0,
-			"Parent": "T_Root"
-		},
 		"T_Beam": {
 			"Tx": 0.0,
-			"Ty": -6.8,
+			"Ty": -7.0,
 			"Tz": 0.0,
 			"Rx": 0.0,
 			"Ry": 0.0,
@@ -673,6 +653,21 @@
 			"Parent": "T_Base",
 			"TdParent": "Root"
 		},
+		"G_Yoke": {
+			"GeometryFunction": ".obj",
+			"FilePath": "LIBRARY/FIXTURE/Meshes/7x12W ZOOM LED MINI Stage Light/Yoke.obj",
+			"DiffuseR": 0.3,
+			"DiffuseG": 0.3,
+			"DiffuseB": 0.3,
+			"EmitR": 0.0,
+			"EmitG": 0.0,
+			"EmitB": 0.0,
+			"Metallic": 0.0,
+			"Roughness": 0.2,
+			"Specular": 1.0,
+			"Parent": "T_Yoke",
+			"TdParent": "Root"
+		},
 		"G_Display": {
 			"GeometryFunction": ".obj",
 			"FilePath": "LIBRARY/FIXTURE/Meshes/7x12W ZOOM LED MINI Stage Light/Display.obj",
@@ -703,27 +698,12 @@
 			"Parent": "T_Head",
 			"TdParent": "Yoke"
 		},
-		"G_Yoke": {
-			"GeometryFunction": ".obj",
-			"FilePath": "LIBRARY/FIXTURE/Meshes/7x12W ZOOM LED MINI Stage Light/Yoke.obj",
-			"DiffuseR": 0.3,
-			"DiffuseG": 0.3,
-			"DiffuseB": 0.3,
-			"EmitR": 0.0,
-			"EmitG": 0.0,
-			"EmitB": 0.0,
-			"Metallic": 0.0,
-			"Roughness": 0.2,
-			"Specular": 1.0,
-			"Parent": "T_Yoke",
-			"TdParent": "Root"
-		},
 		"G_Beam": {
 			"GeometryFunction": ".obj",
 			"FilePath": "LIBRARY/FIXTURE/Meshes/7x12W ZOOM LED MINI Stage Light/Beam.obj",
-			"DiffuseR": 0.0,
-			"DiffuseG": 0.0,
-			"DiffuseB": 0.0,
+			"DiffuseR": 0.1,
+			"DiffuseG": 0.1,
+			"DiffuseB": 0.1,
 			"EmitR": 0.0,
 			"EmitG": 0.0,
 			"EmitB": 0.0,
@@ -740,14 +720,14 @@
 			"EmitR": 0.0,
 			"EmitG": 0.0,
 			"EmitB": 0.0,
-			"BeamPower": 15.0,
+			"BeamPower": 10.0,
 			"AttenNear": 0.0001,
-			"AttenFar": 500.0,
-			"AttenRolloff": 3.0,
+			"AttenFar": 1000.0,
+			"AttenRolloff": 2.2,
 			"ShadowsEnabled": false,
 			"ProjectionsEnabled": false,
-			"ConeAngle": 2.0,
-			"ConeDelta": 1.0,
+			"ConeAngle": 5.0,
+			"ConeDelta": 2.0,
 			"ConeFalloff": 2.2,
 			"GoboId": "",
 			"GoboRotate": 0.0,
