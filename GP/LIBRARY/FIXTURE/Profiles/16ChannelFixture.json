@@ -1,0 +1,759 @@
+{
+	"_Channels_": {
+		"Pan": {
+			"Index": 0,
+			"InputMin": 0,
+			"InputMax": 255,
+			"SlopeClamp": 0.0,
+			"Map": [
+				{
+					"Name": "Map_Pan",
+					"Type": "_Transforms_",
+					"Priority": 1,
+					"Targets": [
+						"T_Yoke"
+					],
+					"Parameters": [
+						"Ry"
+					],
+					"ActiveMin": 0,
+					"ActiveMax": 255,
+					"InputMin": 0,
+					"InputMax": 255,
+					"OutputMin": 0.0,
+					"OutputMax": -540.0,
+					"OutputCustom": "",
+					"AnimationMode": "Constant",
+					"BlendMode": "Set"
+				}
+			]
+		},
+		"PanF": {
+			"Index": 1,
+			"InputMin": 0,
+			"InputMax": 255,
+			"SlopeClamp": 0.0,
+			"Map": [
+				{
+					"Name": "Map_Pan_Fine",
+					"Type": "_Transforms_",
+					"Priority": 1,
+					"Targets": [
+						"T_Yoke"
+					],
+					"Parameters": [
+						"Ry"
+					],
+					"ActiveMin": 0,
+					"ActiveMax": 255,
+					"InputMin": 0,
+					"InputMax": 255,
+					"OutputMin": 0.0,
+					"OutputMax": -1.0,
+					"OutputCustom": "",
+					"AnimationMode": "Constant",
+					"BlendMode": "Add"
+				}
+			]
+		},
+		"Tilt": {
+			"Index": 2,
+			"InputMin": 0,
+			"InputMax": 255,
+			"SlopeClamp": 0.0,
+			"Map": [
+				{
+					"Name": "Map_Tilt",
+					"Type": "_Transforms_",
+					"Priority": 1,
+					"Targets": [
+						"T_Head"
+					],
+					"Parameters": [
+						"Rx"
+					],
+					"ActiveMin": 0,
+					"ActiveMax": 255,
+					"InputMin": 0,
+					"InputMax": 255,
+					"OutputMin": 0.0,
+					"OutputMax": -180.0,
+					"OutputCustom": "",
+					"AnimationMode": "Constant",
+					"BlendMode": "Set"
+				}
+			]
+		},
+		"TiltF": {
+			"Index": 3,
+			"InputMin": 0,
+			"InputMax": 255,
+			"SlopeClamp": 0.0,
+			"Map": [
+				{
+					"Name": "Map_Tilt_Fine",
+					"Type": "_Transforms_",
+					"Priority": 1,
+					"Targets": [
+						"T_Head"
+					],
+					"Parameters": [
+						"Rx"
+					],
+					"ActiveMin": 0,
+					"ActiveMax": 255,
+					"InputMin": 0,
+					"InputMax": 255,
+					"OutputMin": 0.0,
+					"OutputMax": -1.0,
+					"OutputCustom": "",
+					"AnimationMode": "Constant",
+					"BlendMode": "Add"
+				}
+			]
+		},
+		"XYspeed": {
+			"Index": 4,
+			"InputMin": 0,
+			"InputMax": 255,
+			"SlopeClamp": 0.0,
+			"Map": []
+		},
+		"Dimmer": {
+			"Index": 5,
+			"InputMin": 0,
+			"InputMax": 255,
+			"SlopeClamp": 0.0,
+			"Map": [
+				{
+					"Name": "Map_4",
+					"Type": "_Geometry_",
+					"Priority": 10,
+					"Targets": [
+						"G_Beam",
+						"G_Beam",
+						"G_Beam"
+					],
+					"Parameters": [
+						"EmitR",
+						"EmitG",
+						"EmitB"
+					],
+					"ActiveMin": 0,
+					"ActiveMax": 255,
+					"InputMin": 0,
+					"InputMax": 255,
+					"OutputMin": 0.0,
+					"OutputMax": 1.0,
+					"OutputCustom": "",
+					"AnimationMode": "Constant",
+					"BlendMode": "Multiply"
+				},
+				{
+					"Name": "Map_9",
+					"Type": "_Emitters_",
+					"Priority": 10,
+					"Targets": [
+						"E_Emitter",
+						"E_Emitter",
+						"E_Emitter"
+					],
+					"Parameters": [
+						"EmitR",
+						"EmitG",
+						"EmitB"
+					],
+					"ActiveMin": 0,
+					"ActiveMax": 255,
+					"InputMin": 0,
+					"InputMax": 255,
+					"OutputMin": 0.0,
+					"OutputMax": 1.0,
+					"OutputCustom": "",
+					"AnimationMode": "Constant",
+					"BlendMode": "Multiply"
+				}
+			]
+		},
+		"Shutter": {
+			"Index": 6,
+			"InputMin": 0,
+			"InputMax": 255,
+			"SlopeClamp": 0.0,
+			"Map": [
+				{
+					"Name": "Map_0to9_off",
+					"Type": "_Geometry_",
+					"Priority": 3,
+					"Targets": [
+						"G_Beam",
+						"G_Beam",
+						"G_Beam"
+					],
+					"Parameters": [
+						"EmitR",
+						"EmitG",
+						"EmitB"
+					],
+					"ActiveMin": 0,
+					"ActiveMax": 9,
+					"InputMin": 0,
+					"InputMax": 255,
+					"OutputMin": 0.0,
+					"OutputMax": 0.0,
+					"OutputCustom": "",
+					"AnimationMode": "Constant",
+					"BlendMode": "Multiply"
+				},
+				{
+					"Name": "Map_10to245_strobe",
+					"Type": "_Geometry_",
+					"Priority": 3,
+					"Targets": [
+						"G_Beam",
+						"G_Beam",
+						"G_Beam"
+					],
+					"Parameters": [
+						"EmitR",
+						"EmitG",
+						"EmitB"
+					],
+					"ActiveMin": 10,
+					"ActiveMax": 245,
+					"InputMin": 0,
+					"InputMax": 255,
+					"OutputMin": 0.0,
+					"OutputMax": 1.0,
+					"OutputCustom": "",
+					"AnimationMode": "Constant",
+					"BlendMode": "Duty",
+					"DutyRange": [
+						0.75,
+						0.01
+					],
+					"DutyBias": [
+						0.1,
+						0.4
+					]
+				},
+				{
+					"Name": "Map_0to10_off",
+					"Type": "_Emitters_",
+					"Priority": 3,
+					"Targets": [
+						"E_Emitter",
+						"E_Emitter",
+						"E_Emitter"
+					],
+					"Parameters": [
+						"EmitR",
+						"EmitG",
+						"EmitB"
+					],
+					"ActiveMin": 0,
+					"ActiveMax": 9,
+					"InputMin": 0,
+					"InputMax": 255,
+					"OutputMin": 0.0,
+					"OutputMax": 0.0,
+					"OutputCustom": "",
+					"AnimationMode": "Constant",
+					"BlendMode": "Multiply"
+				},
+				{
+					"Name": "Map_10to246_strobe",
+					"Type": "_Emitters_",
+					"Priority": 3,
+					"Targets": [
+						"E_Emitter",
+						"E_Emitter",
+						"E_Emitter"
+					],
+					"Parameters": [
+						"EmitR",
+						"EmitG",
+						"EmitB"
+					],
+					"ActiveMin": 10,
+					"ActiveMax": 245,
+					"InputMin": 0,
+					"InputMax": 255,
+					"OutputMin": 0.0,
+					"OutputMax": 1.0,
+					"OutputCustom": "",
+					"AnimationMode": "Constant",
+					"BlendMode": "Duty",
+					"DutyRange": [
+						0.75,
+						0.01
+					],
+					"DutyBias": [
+						0.1,
+						0.4
+					]
+				}
+			]
+		},
+		"r": {
+			"Index": 7,
+			"InputMin": 0,
+			"InputMax": 255,
+			"SlopeClamp": 0.0,
+			"Map": [
+				{
+					"Name": "Map",
+					"Type": "_Geometry_",
+					"Priority": 1,
+					"Targets": [
+						"G_Beam"
+					],
+					"Parameters": [
+						"EmitR"
+					],
+					"ActiveMin": 0,
+					"ActiveMax": 255,
+					"InputMin": 0,
+					"InputMax": 255,
+					"OutputMin": 0.0,
+					"OutputMax": 5.0,
+					"OutputCustom": "",
+					"AnimationMode": "Constant",
+					"BlendMode": "Add"
+				},
+				{
+					"Name": "Map_5",
+					"Type": "_Emitters_",
+					"Priority": 1,
+					"Targets": [
+						"E_Emitter"
+					],
+					"Parameters": [
+						"EmitR"
+					],
+					"ActiveMin": 0,
+					"ActiveMax": 255,
+					"InputMin": 0,
+					"InputMax": 255,
+					"OutputMin": 0.0,
+					"OutputMax": 1.0,
+					"OutputCustom": "",
+					"AnimationMode": "Constant",
+					"BlendMode": "Set"
+				}
+			]
+		},
+		"g": {
+			"Index": 8,
+			"InputMin": 0,
+			"InputMax": 255,
+			"SlopeClamp": 0.0,
+			"Map": [
+				{
+					"Name": "Map_1",
+					"Type": "_Geometry_",
+					"Priority": 1,
+					"Targets": [
+						"G_Beam"
+					],
+					"Parameters": [
+						"EmitG"
+					],
+					"ActiveMin": 0,
+					"ActiveMax": 255,
+					"InputMin": 0,
+					"InputMax": 255,
+					"OutputMin": 0.0,
+					"OutputMax": 5.0,
+					"OutputCustom": "",
+					"AnimationMode": "Constant",
+					"BlendMode": "Add"
+				},
+				{
+					"Name": "Map_6",
+					"Type": "_Emitters_",
+					"Priority": 1,
+					"Targets": [
+						"E_Emitter"
+					],
+					"Parameters": [
+						"EmitG"
+					],
+					"ActiveMin": 0,
+					"ActiveMax": 255,
+					"InputMin": 0,
+					"InputMax": 255,
+					"OutputMin": 0.0,
+					"OutputMax": 1.0,
+					"OutputCustom": "",
+					"AnimationMode": "Constant",
+					"BlendMode": "Add"
+				}
+			]
+		},
+		"b": {
+			"Index": 9,
+			"InputMin": 0,
+			"InputMax": 255,
+			"SlopeClamp": 0.0,
+			"Map": [
+				{
+					"Name": "Map_2",
+					"Type": "_Geometry_",
+					"Priority": 1,
+					"Targets": [
+						"G_Beam"
+					],
+					"Parameters": [
+						"EmitB"
+					],
+					"ActiveMin": 0,
+					"ActiveMax": 255,
+					"InputMin": 0,
+					"InputMax": 255,
+					"OutputMin": 0.0,
+					"OutputMax": 5.0,
+					"OutputCustom": "",
+					"AnimationMode": "Constant",
+					"BlendMode": "Add"
+				},
+				{
+					"Name": "Map_7",
+					"Type": "_Emitters_",
+					"Priority": 1,
+					"Targets": [
+						"E_Emitter"
+					],
+					"Parameters": [
+						"EmitB"
+					],
+					"ActiveMin": 0,
+					"ActiveMax": 255,
+					"InputMin": 0,
+					"InputMax": 255,
+					"OutputMin": 0.0,
+					"OutputMax": 1.0,
+					"OutputCustom": "",
+					"AnimationMode": "Constant",
+					"BlendMode": "Add"
+				}
+			]
+		},
+		"w": {
+			"Index": 10,
+			"InputMin": 0,
+			"InputMax": 255,
+			"SlopeClamp": 0.0,
+			"Map": [
+				{
+					"Name": "Map_3",
+					"Type": "_Geometry_",
+					"Priority": 2,
+					"Targets": [
+						"G_Beam",
+						"G_Beam",
+						"G_Beam"
+					],
+					"Parameters": [
+						"EmitR",
+						"EmitG",
+						"EmitB"
+					],
+					"ActiveMin": 0,
+					"ActiveMax": 255,
+					"InputMin": 0,
+					"InputMax": 255,
+					"OutputMin": 0.0,
+					"OutputMax": 5.0,
+					"OutputCustom": "",
+					"AnimationMode": "Constant",
+					"BlendMode": "Add"
+				},
+				{
+					"Name": "Map_8",
+					"Type": "_Emitters_",
+					"Priority": 2,
+					"Targets": [
+						"E_Emitter",
+						"E_Emitter",
+						"E_Emitter"
+					],
+					"Parameters": [
+						"EmitR",
+						"EmitG",
+						"EmitB"
+					],
+					"ActiveMin": 0,
+					"ActiveMax": 255,
+					"InputMin": 0,
+					"InputMax": 255,
+					"OutputMin": 0.0,
+					"OutputMax": 1.0,
+					"OutputCustom": "",
+					"AnimationMode": "Constant",
+					"BlendMode": "Add"
+				}
+			]
+		},
+		"ColorTmp": {
+			"Index": 11,
+			"InputMin": 0,
+			"InputMax": 255,
+			"SlopeClamp": 0.0,
+			"Map": []
+		},
+		"ColorCmbo": {
+			"Index": 12,
+			"InputMin": 0,
+			"InputMax": 255,
+			"SlopeClamp": 0.0,
+			"Map": []
+		},
+		"Macro": {
+			"Index": 13,
+			"InputMin": 0,
+			"InputMax": 255,
+			"SlopeClamp": 0.0,
+			"Map": []
+		},
+		"Program": {
+			"Index": 14,
+			"InputMin": 0,
+			"InputMax": 255,
+			"SlopeClamp": 0.0,
+			"Map": []
+		},
+		"Focus": {
+			"Index": 15,
+			"InputMin": 0,
+			"InputMax": 255,
+			"SlopeClamp": 0.0,
+			"Map": [
+				{
+					"Name": "Map_10",
+					"Type": "_Emitters_",
+					"Priority": 1,
+					"Targets": [
+						"E_Emitter"
+					],
+					"Parameters": [
+						"ConeAngle"
+					],
+					"ActiveMin": 0,
+					"ActiveMax": 255,
+					"InputMin": 0,
+					"InputMax": 255,
+					"OutputMin": 2.0,
+					"OutputMax": 5.0,
+					"OutputCustom": "",
+					"AnimationMode": "Constant",
+					"BlendMode": "Set"
+				},
+				{
+					"Name": "Map_11",
+					"Type": "_Emitters_",
+					"Priority": 1,
+					"Targets": [
+						"E_Emitter"
+					],
+					"Parameters": [
+						"ConeDelta"
+					],
+					"ActiveMin": 0,
+					"ActiveMax": 255,
+					"InputMin": 0,
+					"InputMax": 255,
+					"OutputMin": 1.0,
+					"OutputMax": 10.0,
+					"OutputCustom": "",
+					"AnimationMode": "Constant",
+					"BlendMode": "Set"
+				}
+			]
+		}
+	},
+	"_Transforms_": {
+		"T_Root": {
+			"Tx": 0.0,
+			"Ty": 0.0,
+			"Tz": 0.0,
+			"Rx": 0.0,
+			"Ry": 0.0,
+			"Rz": 0.0,
+			"Sx": 1.0,
+			"Sy": 1.0,
+			"Sz": 1.0
+		},
+		"T_Base": {
+			"Tx": 0.0,
+			"Ty": 0.0,
+			"Tz": 0.0,
+			"Rx": 0.0,
+			"Ry": 0.0,
+			"Rz": 0.0,
+			"Sx": 1.0,
+			"Sy": 1.0,
+			"Sz": 1.0,
+			"Parent": "T_Root"
+		},
+		"T_Display": {
+			"Tx": 0.0,
+			"Ty": 0.0,
+			"Tz": 0.0,
+			"Rx": 0.0,
+			"Ry": 0.0,
+			"Rz": 0.0,
+			"Sx": 1.0,
+			"Sy": 1.0,
+			"Sz": 1.0,
+			"Parent": "T_Root"
+		},
+		"T_Head": {
+			"Tx": 0.0,
+			"Ty": 15.0,
+			"Tz": 0.0,
+			"Rx": -90.0,
+			"Ry": 0.0,
+			"Rz": 0.0,
+			"Sx": 1.0,
+			"Sy": 1.0,
+			"Sz": 1.0,
+			"Parent": "T_Yoke"
+		},
+		"T_Yoke": {
+			"Tx": 0.0,
+			"Ty": 7.0,
+			"Tz": 0.0,
+			"Rx": 0.0,
+			"Ry": 0.0,
+			"Rz": 0.0,
+			"Sx": 1.0,
+			"Sy": 1.0,
+			"Sz": 1.0,
+			"Parent": "T_Root"
+		},
+		"T_Beam": {
+			"Tx": 0.0,
+			"Ty": -6.8,
+			"Tz": 0.0,
+			"Rx": 0.0,
+			"Ry": 0.0,
+			"Rz": 0.0,
+			"Sx": 1.0,
+			"Sy": 1.0,
+			"Sz": 1.0,
+			"Parent": "T_Head"
+		},
+		"T_Emitter": {
+			"Tx": 0.0,
+			"Ty": 7.0,
+			"Tz": 0.0,
+			"Rx": 90.0,
+			"Ry": 0.0,
+			"Rz": 0.0,
+			"Sx": 1.0,
+			"Sy": 1.0,
+			"Sz": 1.0,
+			"Parent": "T_Head"
+		}
+	},
+	"_Geometry_": {
+		"G_Base": {
+			"GeometryFunction": ".obj",
+			"FilePath": "LIBRARY/FIXTURE/Meshes/7x12W ZOOM LED MINI Stage Light/Base.obj",
+			"DiffuseR": 0.3,
+			"DiffuseG": 0.3,
+			"DiffuseB": 0.3,
+			"EmitR": 0.0,
+			"EmitG": 0.0,
+			"EmitB": 0.0,
+			"Metallic": 0.0,
+			"Roughness": 0.2,
+			"Specular": 1.0,
+			"Parent": "T_Base",
+			"TdParent": "Root"
+		},
+		"G_Display": {
+			"GeometryFunction": ".obj",
+			"FilePath": "LIBRARY/FIXTURE/Meshes/7x12W ZOOM LED MINI Stage Light/Display.obj",
+			"DiffuseR": 0.1,
+			"DiffuseG": 0.1,
+			"DiffuseB": 0.1,
+			"EmitR": 0.1,
+			"EmitG": 0.8,
+			"EmitB": 0.1,
+			"Metallic": 0.0,
+			"Roughness": 0.2,
+			"Specular": 1.0,
+			"Parent": "T_Display",
+			"TdParent": "Root"
+		},
+		"G_Head": {
+			"GeometryFunction": ".obj",
+			"FilePath": "LIBRARY/FIXTURE/Meshes/7x12W ZOOM LED MINI Stage Light/Head.obj",
+			"DiffuseR": 0.3,
+			"DiffuseG": 0.3,
+			"DiffuseB": 0.3,
+			"EmitR": 0.0,
+			"EmitG": 0.0,
+			"EmitB": 0.0,
+			"Metallic": 0.0,
+			"Roughness": 0.2,
+			"Specular": 1.0,
+			"Parent": "T_Head",
+			"TdParent": "Yoke"
+		},
+		"G_Yoke": {
+			"GeometryFunction": ".obj",
+			"FilePath": "LIBRARY/FIXTURE/Meshes/7x12W ZOOM LED MINI Stage Light/Yoke.obj",
+			"DiffuseR": 0.3,
+			"DiffuseG": 0.3,
+			"DiffuseB": 0.3,
+			"EmitR": 0.0,
+			"EmitG": 0.0,
+			"EmitB": 0.0,
+			"Metallic": 0.0,
+			"Roughness": 0.2,
+			"Specular": 1.0,
+			"Parent": "T_Yoke",
+			"TdParent": "Root"
+		},
+		"G_Beam": {
+			"GeometryFunction": ".obj",
+			"FilePath": "LIBRARY/FIXTURE/Meshes/7x12W ZOOM LED MINI Stage Light/Beam.obj",
+			"DiffuseR": 0.0,
+			"DiffuseG": 0.0,
+			"DiffuseB": 0.0,
+			"EmitR": 0.0,
+			"EmitG": 0.0,
+			"EmitB": 0.0,
+			"Metallic": 0.0,
+			"Roughness": 0.0,
+			"Specular": 1.0,
+			"Parent": "T_Beam",
+			"TdParent": "Head"
+		}
+	},
+	"_Emitters_": {
+		"E_Emitter": {
+			"LightFunction": "Cone",
+			"EmitR": 0.0,
+			"EmitG": 0.0,
+			"EmitB": 0.0,
+			"BeamPower": 15.0,
+			"AttenNear": 0.0001,
+			"AttenFar": 500.0,
+			"AttenRolloff": 3.0,
+			"ShadowsEnabled": false,
+			"ProjectionsEnabled": false,
+			"ConeAngle": 2.0,
+			"ConeDelta": 1.0,
+			"ConeFalloff": 2.2,
+			"GoboId": "",
+			"GoboRotate": 0.0,
+			"GoboBlur": 0.0,
+			"Parent": "T_Emitter",
+			"TdParent": "Head"
+		}
+	}
+}
