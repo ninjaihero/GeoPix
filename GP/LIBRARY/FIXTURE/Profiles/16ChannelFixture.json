@@ -229,7 +229,7 @@
 					"AnimationMode": "Constant",
 					"BlendMode": "Duty",
 					"DutyRange": [
-						0.65,
+						0.5,
 						0.1
 					],
 					"DutyBias": [
@@ -285,7 +285,7 @@
 					"AnimationMode": "Constant",
 					"BlendMode": "Duty",
 					"DutyRange": [
-						0.65,
+						0.5,
 						0.1
 					],
 					"DutyBias": [
@@ -399,6 +399,26 @@
 			"Map": [
 				{
 					"Name": "Map_Lens_b",
+					"Type": "_Geometry_",
+					"Priority": 1,
+					"Targets": [
+						"G_Beam"
+					],
+					"Parameters": [
+						"EmitB"
+					],
+					"ActiveMin": 0,
+					"ActiveMax": 255,
+					"InputMin": 0,
+					"InputMax": 255,
+					"OutputMin": 0.0,
+					"OutputMax": 5.0,
+					"OutputCustom": "",
+					"AnimationMode": "Constant",
+					"BlendMode": "Add"
+				},
+				{
+					"Name": "Map_Em_b",
 					"Type": "_Emitters_",
 					"Priority": 1,
 					"Targets": [
