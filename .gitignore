@@ -45,3 +45,4 @@ GeoPix_2.0.[0-9]*.toe
 # End of https://www.toptal.com/developers/gitignore/api/windows
 
 
+GP/Assets/patreon/getPatrons.py
