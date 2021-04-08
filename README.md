@@ -46,7 +46,7 @@ If you accidentally screw up the executable files, copy any relevant project fil
 - [Website](http://www.geopix.io/)
 
 ### Learning & Resources
-- Wiki / Docs (WIP)
+- [Wiki / Docs](https://github.com/EnviralDesign/GeoPix/wiki)
 - [Forums](https://github.com/EnviralDesign/GeoPix/discussions)
 - [YouTube Channel](https://www.youtube.com/c/LucasMorgan42)
 - [Facebook Group](https://www.facebook.com/groups/GeoPixUserGroup)
