@@ -18,6 +18,8 @@ The recommended way of using GeoPix is to download or checkout the entire reposi
 
 If you already have installed a free or paid TouchDesigner license to your computer, GeoPix will boot right up and be operational after a bit. If you do not have a license, you can get a [free one](https://derivative.ca/) for non commercial work. If you already have a primary older or newer version of Touch that you use for other things, this should not overwrite that install.
 
+Be sure to have an active internet connection during the first run of the batch file, as it will need to download some things, and GeoPix will need to download some python libraries.
+
 ### Batch File
 
 If you're curious, or running into issues - here's what the batch file does:
